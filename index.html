@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/>
+<title>EPI Fácil - Início</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "error-container": "#fce4e0",
+                    "surface-container": "#f2ece4",
+                    "on-surface": "#3a302a",
+                    "on-background": "#3a302a",
+                    "surface-container-highest": "#e6e0d6",
+                    "on-tertiary-fixed-variant": "#6e3030",
+                    "surface-bright": "#faf5ee",
+                    "outline": "#9a9088",
+                    "surface-container-low": "#f6f0e8",
+                    "on-tertiary-fixed": "#2e1515",
+                    "tertiary-fixed": "#fce0e0",
+                    "secondary-fixed": "#eae2da",
+                    "primary": "#c2652a",
+                    "surface-tint": "#c2652a",
+                    "tertiary-container": "#d47070",
+                    "background": "#faf5ee",
+                    "error": "#c0392b",
+                    "on-secondary-container": "#605850",
+                    "surface-dim": "#dcd6cc",
+                    "inverse-on-surface": "#faf5ee",
+                    "on-tertiary": "#ffffff",
+                    "on-secondary-fixed-variant": "#504840",
+                    "on-primary-fixed-variant": "#8a4518",
+                    "on-primary-container": "#fbe8d8",
+                    "surface-container-high": "#ece6dc",
+                    "on-secondary-fixed": "#2a2420",
+                    "on-surface-variant": "#605850",
+                    "surface": "#faf5ee",
+                    "on-primary": "#ffffff",
+                    "tertiary": "#8c3c3c",
+                    "on-secondary": "#ffffff",
+                    "on-error-container": "#7a1a10",
+                    "primary-container": "#e08850",
+                    "surface-variant": "#ece6dc",
+                    "secondary-fixed-dim": "#cec6be",
+                    "on-error": "#ffffff",
+                    "primary-fixed": "#fbe8d8",
+                    "on-tertiary-container": "#3a2020",
+                    "tertiary-fixed-dim": "#e8a0a0",
+                    "inverse-surface": "#3a302a",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary-container": "#eae2da",
+                    "primary-fixed-dim": "#f0a878",
+                    "on-primary-fixed": "#401a08",
+                    "secondary": "#78706a",
+                    "outline-variant": "#d8d0c8",
+                    "inverse-primary": "#f0a878"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["EB Garamond", "serif"],
+                    "display": ["EB Garamond", "serif"],
+                    "body": ["Manrope", "sans-serif"],
+                    "label": ["Manrope", "sans-serif"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Manrope', sans-serif; background-color: #faf5ee; color: #3a302a; }
+        h1, h2, h3, .font-headline { font-family: 'EB Garamond', serif; }
+        .pb-safe { padding-bottom: env(safe-area-inset-bottom); }
+    </style>
+</head>
+<body class="bg-background text-on-background antialiased min-h-screen flex flex-col">
+<!-- Header (Based on TopAppBar) -->
+<header class="bg-background border-b border-outline-variant/60 shadow-sm w-full top-0 sticky z-40 hidden md:block">
+<div class="flex justify-between items-center px-6 py-4 w-full max-w-7xl mx-auto">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-2xl" style="font-variation-settings: 'FILL' 1;">factory</span>
+<span class="font-headline text-xl font-bold text-primary">Setor de Operação</span>
+</div>
+<div class="flex items-center gap-6">
+<nav class="flex gap-6">
+<a class="text-primary font-bold hover:opacity-80 transition-opacity" href="index.html"> Home</a>
+<a class="text-on-surface-variant hover:opacity-80 transition-opacity" href="index.html"> Busca</a>
+<a class="text-on-surface-variant hover:opacity-80 transition-opacity" href="setores.html"> Setores</a>
+<a class="text-on-surface-variant hover:opacity-80 transition-opacity" href="normas.html"> Normas</a>
+</nav>
+<div class="w-10 h-10 rounded-full bg-surface-container overflow-hidden border border-outline-variant/60">
+<img alt="Perfil do Operário" class="w-full h-full object-cover" data-alt="A subtle, warm-toned profile avatar illustration of a construction worker in an editorial minimal style. The image uses earthy burnt sienna and soft rose colors against a warm linen background. High-quality vector art." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7MZSH29nSGn69RyDk7bzNNahx4faEW-7Y1vwgUCZY2B9kDg9nfbhgNAWxrpUU7VHZzHxCzd2lCDWaN5QQhJtQNZ7Ocilrtdwp-FRznwAJBI9RLDs0mDEMRi4Ki7l0KdzIk6bJ8mFQTEJILkjNiZlisb6uttGbZCRNp-bA17c5r08GHbVrKo7J3xk-w3XRhxc3qCmGf6728Vj2-M--JUEZIZQY0VvR8dK7EXlOhhZibzBqpnPc_8ml"/>
+</div>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow w-full max-w-7xl mx-auto px-4 sm:px-6 py-8 pb-32 md:pb-12">
+<!-- Welcome & Search -->
+<section class="mb-12">
+<h1 class="font-headline text-4xl md:text-5xl font-semibold mb-2 text-on-background">Bom dia, Operador.</h1>
+<p class="font-body text-on-surface-variant text-lg mb-8">Encontre o equipamento certo para sua segurança hoje.</p>
+<div class="relative w-full max-w-2xl group">
+<div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-outline">search</span>
+</div>
+<input class="w-full bg-surface-container-lowest border border-outline-variant rounded-xl py-4 pl-12 pr-4 text-on-background placeholder-outline focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all shadow-[0_2px_16px_rgba(58,48,42,0.04)] font-body text-lg" placeholder="Buscar tarefas ou equipamentos..." type="text"/>
+<div class="absolute inset-y-0 right-0 pr-2 flex items-center">
+<button class="bg-primary text-on-primary p-2 rounded-lg hover:bg-primary/90 transition-colors">
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<!-- Acesso Rápido - Riscos Comuns (Bento Item 1) -->
+<section class="md:col-span-8 bg-surface-container-low rounded-2xl p-6 md:p-8 border border-outline-variant/30 shadow-[0_2px_16px_rgba(58,48,42,0.04)]">
+<div class="flex justify-between items-end mb-6">
+<h2 class="font-headline text-2xl text-on-background font-medium">Acesso Rápido por Risco</h2>
+<a class="text-sm font-medium text-primary hover:underline" href="#">Ver todos</a>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+<!-- Ruído -->
+<button class="flex flex-col items-center justify-center p-6 bg-surface-container-lowest rounded-xl border border-outline-variant/50 hover:border-primary hover:bg-primary/5 transition-all group active:scale-95">
+<div class="w-16 h-16 rounded-full bg-secondary-container flex items-center justify-center mb-4 group-hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined text-3xl text-on-secondary-container group-hover:text-on-primary-container" style="font-variation-settings: 'FILL' 1;">hearing</span>
+</div>
+<span class="font-body font-semibold text-on-background">Ruído</span>
+</button>
+<!-- Queda -->
+<button class="flex flex-col items-center justify-center p-6 bg-surface-container-lowest rounded-xl border border-outline-variant/50 hover:border-primary hover:bg-primary/5 transition-all group active:scale-95">
+<div class="w-16 h-16 rounded-full bg-secondary-container flex items-center justify-center mb-4 group-hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined text-3xl text-on-secondary-container group-hover:text-on-primary-container" style="font-variation-settings: 'FILL' 1;">personal_injury</span>
+</div>
+<span class="font-body font-semibold text-on-background">Queda</span>
+</button>
+<!-- Calor -->
+<button class="flex flex-col items-center justify-center p-6 bg-surface-container-lowest rounded-xl border border-outline-variant/50 hover:border-primary hover:bg-primary/5 transition-all group active:scale-95">
+<div class="w-16 h-16 rounded-full bg-secondary-container flex items-center justify-center mb-4 group-hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined text-3xl text-on-secondary-container group-hover:text-on-primary-container" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+</div>
+<span class="font-body font-semibold text-on-background">Calor</span>
+</button>
+<!-- Químico -->
+<button class="flex flex-col items-center justify-center p-6 bg-surface-container-lowest rounded-xl border border-outline-variant/50 hover:border-primary hover:bg-primary/5 transition-all group active:scale-95">
+<div class="w-16 h-16 rounded-full bg-secondary-container flex items-center justify-center mb-4 group-hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined text-3xl text-on-secondary-container group-hover:text-on-primary-container" style="font-variation-settings: 'FILL' 1;">science</span>
+</div>
+<span class="font-body font-semibold text-on-background">Químico</span>
+</button>
+</div>
+</section>
+<!-- EPI do Dia (Bento Item 2) -->
+<section class="md:col-span-4 bg-primary rounded-2xl p-1 relative overflow-hidden shadow-[0_2px_16px_rgba(58,48,42,0.1)] flex flex-col">
+<div class="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-white via-transparent to-transparent"></div>
+<div class="bg-surface-container-lowest m-1 rounded-xl p-6 flex-grow flex flex-col relative z-10">
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-tertiary">star</span>
+<span class="font-body text-sm font-bold text-tertiary uppercase tracking-wider">EPI em Destaque</span>
+</div>
+<h3 class="font-headline text-2xl font-bold text-on-background mb-2">Protetor Auricular Tipo Concha</h3>
+<p class="font-body text-on-surface-variant text-sm mb-6 flex-grow">Essencial para áreas de britagem. Atenuação de 22dB, design ergonômico para uso prolongado.</p>
+<div class="h-32 rounded-lg bg-surface-container overflow-hidden mb-4 relative">
+<img alt="Protetor Auricular" class="w-full h-full object-cover" data-alt="A high-quality, editorial photograph of industrial earmuffs resting on a warm, sun-lit wooden surface. The lighting is soft and golden, highlighting the textures of the protective gear. The background is a clean, warm linen color, emphasizing minimalism and safety." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsXrcyJ3M_3mc8LP_m8jyQ99AJDx1jGym3EMFvkU3QzsCIr06ANhWracIhJ4tnb02T3ywRU9sFLUPM4pSPDFP0www8AsROnU5V2LI5Jq5V6n1dheTKxOT0UmGBoOkJL_H5KT3oMA3Gab3ezCfgU8pQojG3VPa2fc1kl_DDM__NNMWz5rSjT785uVAzWzQRP4v998TMp90FcSZqLX8qXu61dfpCbXkGYLwyLkOS46ZvCm0WdIs3xSWF"/>
+</div>
+<button class="w-full bg-primary text-on-primary py-3 rounded-lg font-body font-semibold hover:bg-primary/90 transition-colors active:scale-95">
+                        Ver Detalhes
+                    </button>
+</div>
+</section>
+</div>
+</main>
+<!-- Bottom Navigation (Mobile Only) -->
+<nav class="md:hidden bg-surface-container-low border-t border-outline-variant/60 shadow-[0_-2px_16px_rgba(58,48,42,0.04)] fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-3 pb-safe">
+<!-- Active Tab: Home -->
+<a class="flex flex-col items-center justify-center bg-primary-container text-on-primary-fixed-variant rounded-xl px-4 py-1 active:scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="font-body text-xs font-medium uppercase tracking-wider">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-secondary-fixed-variant opacity-70 hover:bg-secondary-container/50 transition-colors rounded-xl px-4 py-1 active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined mb-1">search</span>
+<span class="font-body text-xs font-medium uppercase tracking-wider">Busca</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-secondary-fixed-variant opacity-70 hover:bg-secondary-container/50 transition-colors rounded-xl px-4 py-1 active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined mb-1">grid_view</span>
+<span class="font-body text-xs font-medium uppercase tracking-wider">Setores</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-secondary-fixed-variant opacity-70 hover:bg-secondary-container/50 transition-colors rounded-xl px-4 py-1 active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined mb-1">menu_book</span>
+<span class="font-body text-xs font-medium uppercase tracking-wider">Normas</span>
+</a>
+</nav>
+<script src="app.js"></script></body></html>
