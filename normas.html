@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+
+<html class="antialiased" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Direitos e Deveres - Setor de Operação</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "error-container": "#fce4e0",
+                        "surface-container": "#f2ece4",
+                        "on-surface": "#3a302a",
+                        "on-background": "#3a302a",
+                        "surface-container-highest": "#e6e0d6",
+                        "on-tertiary-fixed-variant": "#6e3030",
+                        "surface-bright": "#faf5ee",
+                        "outline": "#9a9088",
+                        "surface-container-low": "#f6f0e8",
+                        "on-tertiary-fixed": "#2e1515",
+                        "tertiary-fixed": "#fce0e0",
+                        "secondary-fixed": "#eae2da",
+                        "primary": "#c2652a",
+                        "surface-tint": "#c2652a",
+                        "tertiary-container": "#d47070",
+                        "background": "#faf5ee",
+                        "error": "#c0392b",
+                        "on-secondary-container": "#605850",
+                        "surface-dim": "#dcd6cc",
+                        "inverse-on-surface": "#faf5ee",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-fixed-variant": "#504840",
+                        "on-primary-fixed-variant": "#8a4518",
+                        "on-primary-container": "#fbe8d8",
+                        "surface-container-high": "#ece6dc",
+                        "on-secondary-fixed": "#2a2420",
+                        "on-surface-variant": "#605850",
+                        "surface": "#faf5ee",
+                        "on-primary": "#ffffff",
+                        "tertiary": "#8c3c3c",
+                        "on-secondary": "#ffffff",
+                        "on-error-container": "#7a1a10",
+                        "primary-container": "#e08850",
+                        "surface-variant": "#ece6dc",
+                        "secondary-fixed-dim": "#cec6be",
+                        "on-error": "#ffffff",
+                        "primary-fixed": "#fbe8d8",
+                        "on-tertiary-container": "#3a2020",
+                        "tertiary-fixed-dim": "#e8a0a0",
+                        "inverse-surface": "#3a302a",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-container": "#eae2da",
+                        "primary-fixed-dim": "#f0a878",
+                        "on-primary-fixed": "#401a08",
+                        "secondary": "#78706a",
+                        "outline-variant": "#d8d0c8",
+                        "inverse-primary": "#f0a878"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["EB Garamond", "serif"],
+                        "display": ["EB Garamond", "serif"],
+                        "body": ["Manrope", "sans-serif"],
+                        "label": ["Manrope", "sans-serif"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: theme('colors.background');
+            color: theme('colors.on-background');
+            font-family: theme('fontFamily.body');
+        }
+        
+        .tab-content { display: none; }
+        .tab-content.active { display: block; animation: fadeIn 0.4s ease-in-out; }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(216, 208, 200, 0.6);
+        }
+        
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen pb-24 md:pb-0 flex flex-col">
+<!-- TopAppBar -->
+<header class="w-full top-0 sticky bg-background border-b border-outline-variant/60 shadow-sm z-40">
+<div class="flex justify-between items-center px-6 py-4 w-full max-w-7xl mx-auto">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-2xl" data-weight="fill" style="font-variation-settings: 'FILL' 1;">factory</span>
+<h1 class="font-headline text-2xl font-bold text-primary tracking-tight">Setor de Operação</h1>
+</div>
+<div class="flex items-center gap-3">
+<span class="font-body text-sm font-medium text-on-surface-variant hidden md:block">Perfil do Operário</span>
+<div class="w-10 h-10 rounded-full bg-surface-container-highest border border-outline-variant overflow-hidden">
+<img alt="Avatar do usuário" class="w-full h-full object-cover" data-alt="A close up portrait photo of a construction worker wearing a hard hat, smiling warmly, lit by soft golden hour natural sunlight. High quality editorial photography style with a warm toned color palette matching the UI." src="https://lh3.googleusercontent.com/aida-public/AB6AXuASaCgpBryvFsb7eLkj-TD48x0zLLEySOpop_z0WR8SEpI6xH18B3JvUmV_4V3RG3FkqzmasLaSfHrTOZYnIFUC77O7Dj_ZDJHSMZN1V0CQM8XJp35nCpz2bEM4J2W8hY8F51mgJ7zggpsNf5yB46tm61gCATwGI9wGZSpy0WOWlQGJlJ74H9IEH1WEvXjpSXTsBd3odGhlGr71jLIJIiXCjgFejfd2eQUuD9B2aGz3kpCfvWFCgegZ"/>
+</div>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-16">
+<!-- Page Header -->
+<div class="mb-12 max-w-3xl">
+<h2 class="font-headline text-4xl md:text-5xl lg:text-6xl text-on-background mb-4 leading-tight">Direitos e Deveres</h2>
+<p class="font-body text-lg text-on-surface-variant leading-relaxed">
+                Segurança é um compromisso mútuo. Entenda as diretrizes fundamentais das normas NR-01 e NR-06 para garantir um ambiente de trabalho protegido para todos.
+            </p>
+</div>
+<!-- Mobile Tabs (Hidden on Desktop, Visible on Mobile/Tablet) -->
+<div class="lg:hidden mb-8">
+<div class="flex p-1 bg-surface-container-low rounded-xl border border-outline-variant/60">
+<button class="flex-1 py-3 px-4 rounded-lg text-sm font-bold transition-all duration-300 bg-primary text-on-primary shadow-sm" id="tab-btn-empresa" onclick="switchTab('empresa')">
+                    A Empresa Fornece
+                </button>
+<button class="flex-1 py-3 px-4 rounded-lg text-sm font-medium transition-all duration-300 text-on-surface-variant hover:bg-surface-container" id="tab-btn-trabalhador" onclick="switchTab('trabalhador')">
+                    O Trabalhador Cumpre
+                </button>
+</div>
+</div>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
+<!-- Column 1: O que a empresa deve fornecer -->
+<div class="tab-content active lg:!block" id="col-empresa">
+<div class="flex items-center gap-3 mb-8 pb-4 border-b border-outline-variant/60">
+<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-2xl">business</span>
+</div>
+<h3 class="font-headline text-3xl text-on-background">A Empresa Fornece</h3>
+</div>
+<div class="space-y-6">
+<!-- Card 1 -->
+<div class="glass-card rounded-2xl p-6 sm:p-8 hover:-translate-y-1 transition-transform duration-300">
+<div class="flex gap-4">
+<div class="mt-1 flex-shrink-0">
+<span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">health_and_safety</span>
+</div>
+<div>
+<h4 class="font-body font-bold text-xl text-on-background mb-2">EPIs Gratuitos e Adequados</h4>
+<p class="font-body text-on-surface-variant leading-relaxed">
+                                    Fornecimento de Equipamentos de Proteção Individual (EPI) em perfeito estado de conservação, adequados ao risco de cada atividade, sem custo ao trabalhador.
+                                </p>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="glass-card rounded-2xl p-6 sm:p-8 hover:-translate-y-1 transition-transform duration-300">
+<div class="flex gap-4">
+<div class="mt-1 flex-shrink-0">
+<span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">model_training</span>
+</div>
+<div>
+<h4 class="font-body font-bold text-xl text-on-background mb-2">Treinamento e Orientação</h4>
+<p class="font-body text-on-surface-variant leading-relaxed">
+                                    Capacitação contínua sobre os riscos da operação, procedimentos de segurança e o uso correto, guarda e conservação dos equipamentos de proteção.
+                                </p>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="glass-card rounded-2xl p-6 sm:p-8 hover:-translate-y-1 transition-transform duration-300">
+<div class="flex gap-4">
+<div class="mt-1 flex-shrink-0">
+<span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">assignment_turned_in</span>
+</div>
+<div>
+<h4 class="font-body font-bold text-xl text-on-background mb-2">Ambiente Seguro</h4>
+<p class="font-body text-on-surface-variant leading-relaxed">
+                                    Implementação de medidas de prevenção para eliminar ou reduzir os riscos no local de trabalho, priorizando a proteção coletiva antes da individual.
+                                </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Column 2: O que o trabalhador deve cumprir -->
+<div class="tab-content lg:!block" id="col-trabalhador">
+<div class="flex items-center gap-3 mb-8 pb-4 border-b border-outline-variant/60">
+<div class="w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-2xl">engineering</span>
+</div>
+<h3 class="font-headline text-3xl text-on-background">O Trabalhador Cumpre</h3>
+</div>
+<div class="space-y-6">
+<!-- Card 1 -->
+<div class="bg-surface-container-low border border-outline-variant/40 rounded-2xl p-6 sm:p-8 hover:-translate-y-1 transition-transform duration-300">
+<div class="flex gap-4">
+<div class="mt-1 flex-shrink-0">
+<span class="material-symbols-outlined text-tertiary text-3xl" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<div>
+<h4 class="font-body font-bold text-xl text-on-background mb-2">Uso Obrigatório do EPI</h4>
+<p class="font-body text-on-surface-variant leading-relaxed">
+                                    Utilizar o EPI fornecido apenas para a finalidade a que se destina, durante todo o período de exposição ao risco, seguindo as orientações recebidas.
+                                </p>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-low border border-outline-variant/40 rounded-2xl p-6 sm:p-8 hover:-translate-y-1 transition-transform duration-300">
+<div class="flex gap-4">
+<div class="mt-1 flex-shrink-0">
+<span class="material-symbols-outlined text-tertiary text-3xl" style="font-variation-settings: 'FILL' 1;">cleaning_services</span>
+</div>
+<div>
+<h4 class="font-body font-bold text-xl text-on-background mb-2">Guarda e Conservação</h4>
+<p class="font-body text-on-surface-variant leading-relaxed">
+                                    Responsabilizar-se pela limpeza, guarda e conservação adequada dos equipamentos recebidos, evitando danos por mau uso.
+                                </p>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-low border border-outline-variant/40 rounded-2xl p-6 sm:p-8 hover:-translate-y-1 transition-transform duration-300">
+<div class="flex gap-4">
+<div class="mt-1 flex-shrink-0">
+<span class="material-symbols-outlined text-tertiary text-3xl" style="font-variation-settings: 'FILL' 1;">report_problem</span>
+</div>
+<div>
+<h4 class="font-body font-bold text-xl text-on-background mb-2">Comunicar Alterações</h4>
+<p class="font-body text-on-surface-variant leading-relaxed">
+                                    Comunicar imediatamente ao empregador ou setor responsável (SESMT) qualquer alteração que torne o EPI impróprio para uso, solicitando substituição.
+                                </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Contact Support CTA -->
+<div class="mt-16 md:mt-24 rounded-3xl overflow-hidden relative">
+<div class="absolute inset-0 bg-cover bg-center opacity-20" data-alt="A warm, elegantly lit corporate support office setting, very slightly blurred depth of field. Soft sunlight casting gentle shadows on clean wooden desks. In the foreground a blurred plant. Tonal palette features earthy sienna and off-white linens, conveying trust and warmth." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCGzrVTpG6Bot0h-hZ_6IiXiQTCEq-IF3KJ9Up_Vm_srDKTvdjOVZnUVCdtAOSTHrJtHwPJXwpTNXdIdhQjvStPsmf8CQo3qBE69b4YyRVTm9m6FCtj2TMJVO1qI1GZtJPnC5v4FVg-F4l34lV3nrkSTpITZX_xu-FnaiYlZq2jG7FNfqF-V4w6wo0WclrLHtqcRdRRti72F8o8M4iag9teVshKJkcC-CZjftiG_oyAdnd8kpcPuwjq')"></div>
+<div class="relative bg-primary/10 backdrop-blur-sm border border-primary/20 p-8 md:p-12 text-center rounded-3xl">
+<span class="material-symbols-outlined text-primary text-4xl mb-4" style="font-variation-settings: 'FILL' 1;">support_agent</span>
+<h3 class="font-headline text-3xl md:text-4xl text-on-background mb-4">Dúvidas sobre Segurança?</h3>
+<p class="font-body text-on-surface-variant max-w-2xl mx-auto mb-8 text-lg">
+                    A equipe do SESMT (Serviço Especializado em Engenharia de Segurança e em Medicina do Trabalho) está disponível para orientar e receber solicitações de EPIs.
+                </p>
+<div class="flex flex-col sm:flex-row justify-center gap-4">
+<a class="inline-flex items-center justify-center gap-2 bg-primary text-on-primary px-8 py-4 rounded-xl font-bold hover:bg-primary/90 transition-colors" href="#">
+<span class="material-symbols-outlined text-xl">chat</span>
+                        Falar com SESMT
+                    </a>
+<a class="inline-flex items-center justify-center gap-2 bg-transparent border-2 border-primary text-primary px-8 py-4 rounded-xl font-bold hover:bg-primary/5 transition-colors" href="#">
+<span class="material-symbols-outlined text-xl">book</span>
+                        Ler Norma Completa
+                    </a>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-3 pb-safe bg-surface-container-low border-t border-outline-variant/60 shadow-[0_-2px_16px_rgba(58,48,42,0.04)]">
+<a class="flex flex-col items-center justify-center text-on-secondary-fixed-variant opacity-70 hover:bg-secondary-container/50 transition-colors rounded-xl px-4 py-1 active:scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined mb-1">home</span>
+<span class="font-body text-[10px] font-medium uppercase tracking-wider">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-secondary-fixed-variant opacity-70 hover:bg-secondary-container/50 transition-colors rounded-xl px-4 py-1 active:scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined mb-1">search</span>
+<span class="font-body text-[10px] font-medium uppercase tracking-wider">Busca</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-secondary-fixed-variant opacity-70 hover:bg-secondary-container/50 transition-colors rounded-xl px-4 py-1 active:scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined mb-1">grid_view</span>
+<span class="font-body text-[10px] font-medium uppercase tracking-wider">Setores</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-primary-container text-on-primary-fixed-variant rounded-xl px-4 py-1 active:scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 1;">menu_book</span>
+<span class="font-body text-[10px] font-medium uppercase tracking-wider">Normas</span>
+</a>
+</nav>
+<script>
+        // Tab Switching Logic for Mobile
+        function switchTab(tabId) {
+            // Only execute if we are on a screen size where tabs are needed
+            if (window.innerWidth >= 1024) return; // lg breakpoint in tailwind is 1024px
+
+            const contents = document.querySelectorAll('.tab-content');
+            const btns = [document.getElementById('tab-btn-empresa'), document.getElementById('tab-btn-trabalhador')];
+            
+            // Reset all
+            contents.forEach(c => c.classList.remove('active'));
+            btns.forEach(b => {
+                b.className = 'flex-1 py-3 px-4 rounded-lg text-sm font-medium transition-all duration-300 text-on-surface-variant hover:bg-surface-container';
+            });
+
+            // Activate selected
+            document.getElementById(`col-${tabId}`).classList.add('active');
+            const activeBtn = document.getElementById(`tab-btn-${tabId}`);
+            activeBtn.className = 'flex-1 py-3 px-4 rounded-lg text-sm font-bold transition-all duration-300 bg-primary text-on-primary shadow-sm';
+        }
+
+        // Handle resize events to ensure desktop view remains correct
+        window.addEventListener('resize', () => {
+            if (window.innerWidth >= 1024) {
+                document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+            } else {
+                // If resizing down to mobile, ensure at least one tab is active visually if none are
+                const hasActive = Array.from(document.querySelectorAll('.tab-content')).some(c => c.classList.contains('active'));
+                if(!hasActive) switchTab('empresa');
+            }
+        });
+    </script>
+<script src="app.js"></script></body></html>
